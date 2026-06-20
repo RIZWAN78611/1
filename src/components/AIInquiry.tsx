@@ -64,11 +64,11 @@ const AIInquiry = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[60]">
+    <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end">
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+            initial={{ opacity: 0, scale: 0.9, y: 20, transformOrigin: "bottom right" }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: 20 }}
             className="bg-slate-900 border border-slate-700 w-80 sm:w-96 h-[500px] rounded-2xl shadow-2xl flex flex-col mb-4 overflow-hidden"
@@ -76,11 +76,16 @@ const AIInquiry = () => {
             {/* Header */}
             <div className="bg-blue-600 p-4 flex justify-between items-center">
               <div className="flex items-center">
-                <Bot className="h-6 w-6 text-white mr-2" />
-                <span className="text-white font-bold">AI Assistant</span>
+                <div className="bg-white/20 p-1.5 rounded-lg mr-2">
+                  <Bot className="h-6 w-6 text-white" />
+                </div>
+                <div>
+                  <span className="text-white font-bold block leading-none">UAU AI Robot</span>
+                  <span className="text-blue-200 text-[10px] uppercase font-bold tracking-tighter">Online & Responsive</span>
+                </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white">
-                <X className="h-6 w-6" />
+              <button onClick={() => setIsOpen(false)} className="text-white/80 hover:text-white bg-white/10 p-1 rounded-full">
+                <X className="h-5 w-5" />
               </button>
             </div>
 
@@ -120,12 +125,47 @@ const AIInquiry = () => {
         )}
       </AnimatePresence>
 
-      <button
+      <motion.button
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        whileTap={{ scale: 0.9 }}
+        animate={{
+          y: [0, -10, 0],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 active:scale-95"
+        className="relative bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg shadow-blue-500/20 group overflow-hidden"
       >
-        <MessageSquare className="h-6 w-6" />
-      </button>
+        <motion.div
+          animate={{
+            rotateY: [0, 360],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        >
+          <Bot className="h-8 w-8" />
+        </motion.div>
+
+        {/* Radar Ping Effect */}
+        <span className="absolute inset-0 rounded-full border-4 border-blue-400 opacity-0 group-hover:animate-ping" />
+      </motion.button>
+
+      {!isOpen && (
+        <motion.div
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="bg-white text-slate-900 px-3 py-1 rounded-lg text-xs font-bold mb-2 shadow-xl relative"
+        >
+          Need help? Ask me!
+          <div className="absolute top-full right-4 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-white" />
+        </motion.div>
+      )}
     </div>
   );
 };

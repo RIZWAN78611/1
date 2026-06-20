@@ -6,8 +6,11 @@ import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-24 bg-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="py-24 bg-slate-900 relative overflow-hidden">
+      {/* Abstract industrial detail */}
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-600/5 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Get In Touch" subtitle="Let's build something together" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">

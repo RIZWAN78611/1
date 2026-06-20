@@ -53,8 +53,13 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-slate-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="services" className="py-24 bg-slate-900 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:2rem_2rem]" />
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading title="Our Expertise" subtitle="Precision Engineering Solutions" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

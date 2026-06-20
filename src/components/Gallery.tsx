@@ -4,6 +4,9 @@ import React from "react";
 import SectionHeading from "./SectionHeading";
 import { motion } from "framer-motion";
 
+// NOTE: These images are placeholders from Unsplash to demonstrate the gallery layout.
+// They should be replaced with actual high-resolution photographs of UAU JIGBO TECHNICS'
+// machines, components, and facility for the final production site.
 const galleryItems = [
   {
     title: "CNC Vertical Machining Center",

@@ -15,8 +15,18 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-slate-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-24 bg-slate-950 relative overflow-hidden">
+      {/* Tech background element */}
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+        <svg viewBox="0 0 100 100" className="w-full h-full text-blue-500 fill-current">
+          <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+          </pattern>
+          <rect width="100" height="100" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="lg:w-1/2">
             <SectionHeading
