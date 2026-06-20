@@ -6,12 +6,14 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIInquiry from "@/components/AIInquiry";
+import { Connect } from "@/components/Connect";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950">
       <Navbar />
       <Hero />
+      <Connect />
       <Services />
       <Gallery />
       <About />

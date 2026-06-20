@@ -59,7 +59,7 @@ const About = () => {
               <div className="p-12 flex flex-col justify-center h-full">
                 <div className="text-6xl font-black text-white/10 absolute top-4 left-4">0.010</div>
                 <h4 className="text-4xl font-bold text-white mb-4">Quality First</h4>
-                <p className="text-blue-400 font-medium italic">"Precision is not just a requirement, it's our promise."</p>
+                <p className="text-blue-400 font-medium italic">&quot;Precision is not just a requirement, it&apos;s our promise.&quot;</p>
               </div>
             </div>
             {/* Decoration */}
