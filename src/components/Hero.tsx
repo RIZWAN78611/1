@@ -11,17 +11,18 @@ const Hero = () => {
       {/* Background patterns */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105 blur-[2px]"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-100"
           style={{
-            backgroundImage: 'url("https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=2000&auto=format&fit=crop")',
+            backgroundImage: 'url("https://images.unsplash.com/photo-1504328332780-bc2d039f9a42?q=80&w=2000&auto=format&fit=crop")',
           }}
         />
-        {/* CSS Overlay Mask */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0c]/90 via-[#0a0a0c]/80 to-[#0a0a0c]" />
+        {/* Premium Dark Overlay Mask */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0c] via-[#0a0a0c]/80 to-[#0a0a0c]/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0c]/10 via-transparent to-[#0a0a0c]" />
         <div className="absolute inset-0 bg-[#0a0a0c]/40 backdrop-blur-[1px]" />
 
-        {/* Subtle grid overlay for texture */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+        {/* Subtle tech grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-10" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,7 +39,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-2 tracking-tight">
               UAU JIGBO <span className="text-blue-500">TECHNICS</span>
             </h1>
-            <h2 className="text-xl md:text-3xl font-bold text-slate-400 mb-6 uppercase tracking-widest">
+            <h2 className="text-xl md:text-3xl font-bold text-slate-300 mb-6 uppercase tracking-widest">
               Precision Machining, Dies & moulds
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-xl font-light leading-relaxed">

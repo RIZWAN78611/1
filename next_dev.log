@@ -1,0 +1,27 @@
+
+> uau-website@0.1.0 dev
+> next dev -H 0.0.0.0
+
+   ▲ Next.js 15.5.19
+   - Local:        http://localhost:3000
+   - Network:      http://0.0.0.0:3000
+
+ ✓ Starting...
+ ✓ Ready in 2.4s
+ ○ Compiling / ...
+ ✓ Compiled / in 10.6s (2648 modules)
+ GET / 200 in 14568ms
+ ✓ Compiled in 469ms (1240 modules)
+ ✓ Compiled in 946ms (1240 modules)
+ ✓ Compiled in 291ms (1240 modules)
+ ✓ Compiled in 204ms (1226 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 656ms (1408 modules)
+ GET / 200 in 1606ms
+ ✓ Compiled in 240ms (1240 modules)
+ ✓ Compiled in 832ms (1240 modules)
+ ✓ Compiled in 254ms (1240 modules)
+ ✓ Compiled in 158ms (1226 modules)
+ ✓ Compiled / in 475ms (1408 modules)
+ GET / 200 in 1439ms
+ ✓ Compiled in 216ms (1240 modules)
