@@ -49,22 +49,31 @@ const About = () => {
             </div>
           </div>
 
-          <div className="lg:w-1/2 relative">
-            <div className="aspect-square bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative">
-              {/* Abstract mechanical pattern decoration */}
-              <div className="absolute inset-0 flex items-center justify-center opacity-20">
-                 <div className="w-64 h-64 border-8 border-dashed border-blue-500 rounded-full animate-spin-slow" />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent" />
-              <div className="p-12 flex flex-col justify-center h-full">
-                <div className="text-6xl font-black text-white/10 absolute top-4 left-4">0.010</div>
+          <div className="lg:w-1/2 relative w-full">
+            <div className="aspect-video lg:aspect-square bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative group">
+              {/* Background Image of Micrometer */}
+              <div
+                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                style={{
+                   backgroundImage: 'url("https://images.unsplash.com/photo-1517420812314-8b1e39b0ad0e?q=80&w=1000")'
+                }}
+              />
+              <div className="absolute inset-0 bg-slate-900/60 backdrop-blur-[2px]" />
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent" />
+
+              <div className="relative p-12 flex flex-col justify-center h-full z-10">
                 <h4 className="text-4xl font-bold text-white mb-4">Quality First</h4>
-                <p className="text-blue-400 font-medium italic">&quot;Precision is not just a requirement, it&apos;s our promise.&quot;</p>
+                <p className="text-blue-300 font-medium italic text-lg leading-relaxed">
+                  &quot;Precision is not just a requirement, it&apos;s our promise.&quot;
+                </p>
               </div>
+
+              {/* Decorative Tech Borders */}
+              <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-blue-500/50" />
+              <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-blue-500/50" />
             </div>
-            {/* Decoration */}
+            {/* Glow Decoration */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl" />
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-600/10 rounded-full blur-3xl" />
           </div>
         </div>
       </div>

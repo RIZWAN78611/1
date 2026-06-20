@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import ThreeScene from "./ThreeScene";
 
 const Hero = () => {
   return (
@@ -24,39 +25,49 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-10" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeInOut"
-            }}
-            className="mb-8"
-          >
-             <img src="/logo.png" alt="UAU JIGBO Logo" className="h-24 w-auto drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]" />
-          </motion.div>
+      {/* Top Left Logo */}
+      <div className="absolute top-8 left-8 z-50">
+        <motion.div
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            repeatType: "reverse",
+            ease: "easeInOut"
+          }}
+        >
+          <img src="/logo.png" alt="UAU JIGBO Logo" className="h-16 md:h-20 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]" />
+        </motion.div>
+      </div>
 
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 lg:mt-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="text-left"
           >
-            <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight">
-              UAU JIGBO <span className="text-blue-500">TECHNICS</span>
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-blue-500/10 border border-blue-500/20 backdrop-blur-md">
+              <span className="text-blue-400 text-sm font-semibold tracking-wider uppercase">TOL ±0.010 Precision Engineering</span>
+            </div>
+
+            <h1 className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter leading-tight">
+              UAU JIGBO <br/>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600">TECHNICS</span>
             </h1>
-            <h2 className="text-xl md:text-3xl font-bold text-slate-300 mb-8 uppercase tracking-[0.2em]">
+
+            <h2 className="text-xl md:text-2xl font-bold text-slate-300 mb-8 uppercase tracking-[0.15em] border-l-4 border-blue-600 pl-4">
               Precision Machining, Dies & Moulds
             </h2>
-            <p className="text-lg md:text-2xl text-gray-300 mb-12 max-w-2xl font-light leading-relaxed mx-auto">
-              Engineering Excellence with <span className="text-blue-400 font-semibold">TOL ±0.010</span>.
-              Specializing in CNC Milling, Turning & Job Works.
+
+            <p className="text-lg md:text-xl text-gray-400 mb-10 max-w-xl font-light leading-relaxed">
+              Specializing in <span className="text-white font-medium">CNC Milling</span>, <span className="text-white font-medium">Turning</span>, and <span className="text-white font-medium">Jig Boring</span>.
+              Delivering high-quality components with rapid turnaround.
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <div className="flex flex-wrap items-center gap-6">
               <a
                 href="#services"
                 className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-bold text-lg transition-all flex items-center group shadow-lg shadow-blue-900/40"
@@ -68,9 +79,20 @@ const Hero = () => {
                 href="#contact"
                 className="px-10 py-4 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl font-bold text-lg transition-all"
               >
-                Get in Touch
+                Get a Quote
               </a>
             </div>
+          </motion.div>
+
+          {/* Right Column: 3D Scene */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="hidden lg:block relative"
+          >
+             <div className="absolute inset-0 bg-blue-500/5 rounded-full blur-[100px] -z-10" />
+             <ThreeScene />
           </motion.div>
         </div>
       </div>
