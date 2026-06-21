@@ -26,28 +26,6 @@ const Hero = () => {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:5rem_5rem] opacity-10" />
       </div>
 
-      {/* Top Left Logo */}
-      <div className="absolute top-8 left-8 z-50">
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            repeatType: "reverse",
-            ease: "easeInOut"
-          }}
-          className="relative h-16 md:h-20 w-48 md:w-60"
-        >
-          <Image
-            src="/logo-new.png"
-            alt="UAU JIGBO Logo"
-            fill
-            className="object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]"
-          />
-        </motion.div>
-      </div>
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-20 lg:mt-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div

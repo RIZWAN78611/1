@@ -7,10 +7,13 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIInquiry from "@/components/AIInquiry";
 import { Connect } from "@/components/Connect";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import PrecisionCursor from "@/components/PrecisionCursor";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950">
+      <PrecisionCursor />
       <Navbar />
       <Hero />
       <Connect />
@@ -20,6 +23,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <AIInquiry />
+      <WhatsAppButton />
     </main>
   );
 }

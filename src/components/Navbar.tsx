@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
             <div className="relative h-10 w-12 mr-3">
-              <Image src="/logo-new.png" alt="UAU JIGBO Logo" fill className="object-contain" />
+              <Image src="/logo.png" alt="UAU JIGBO Logo" fill className="object-contain" />
             </div>
             <span className="text-white font-bold text-xl tracking-wider">
               UAU JIGBO <span className="text-blue-500">TECHNICS</span>
