@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import ThreeScene from "./ThreeScene";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -36,8 +37,14 @@ const Hero = () => {
             repeatType: "reverse",
             ease: "easeInOut"
           }}
+          className="relative h-16 md:h-20 w-48 md:w-60"
         >
-          <img src="/logo.png" alt="UAU JIGBO Logo" className="h-16 md:h-20 w-auto drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]" />
+          <Image
+            src="/logo-new.png"
+            alt="UAU JIGBO Logo"
+            fill
+            className="object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.4)]"
+          />
         </motion.div>
       </div>
 

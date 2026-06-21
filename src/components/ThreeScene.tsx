@@ -2,7 +2,7 @@
 
 import React, { useRef, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, PerspectiveCamera, Float, MeshDistortMaterial } from "@react-three/drei";
+import { OrbitControls, PerspectiveCamera, Float } from "@react-three/drei";
 import * as THREE from "three";
 
 const Gear = ({ teeth = 17, radius = 2, thickness = 0.5 }) => {
@@ -11,7 +11,6 @@ const Gear = ({ teeth = 17, radius = 2, thickness = 0.5 }) => {
   const gearShape = useMemo(() => {
     const shape = new THREE.Shape();
     const toothDepth = 0.4;
-    const toothWidth = 0.2;
 
     for (let i = 0; i < teeth; i++) {
       const angle = (i / teeth) * Math.PI * 2;

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
-            <img src="/logo.png" alt="UAU JIGBO Logo" className="h-10 w-auto mr-3" />
+            <div className="relative h-10 w-12 mr-3">
+              <Image src="/logo-new.png" alt="UAU JIGBO Logo" fill className="object-contain" />
+            </div>
             <span className="text-white font-bold text-xl tracking-wider">
               UAU JIGBO <span className="text-blue-500">TECHNICS</span>
             </span>
