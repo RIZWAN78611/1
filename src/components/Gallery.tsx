@@ -62,7 +62,87 @@ const galleryItems = [
     image: "/gallery/pet-molds.jpg",
   },
   {
-    title: "Our Hyderabad Facility",
+    title: "Blow Molds (PET & HDPE)",
+    category: "Products",
+    image: "/gallery/blow-molds.jpg",
+  },
+  {
+    title: "Injection Molds Showcase",
+    category: "Products",
+    image: "/gallery/injection-molds.jpg",
+  },
+  {
+    title: "Facility Overview",
+    category: "Infrastructure",
+    image: "/gallery/workshop-view-1.jpg",
+  },
+  {
+    title: "Machine Shop Floor",
+    category: "Infrastructure",
+    image: "/gallery/workshop-view-2.jpg",
+  },
+  {
+    title: "CNC Machine Setup",
+    category: "Machinery",
+    image: "/gallery/machine-setup-1.jpg",
+  },
+  {
+    title: "VMC Component Setup",
+    category: "Machinery",
+    image: "/gallery/machine-setup-2.jpg",
+  },
+  {
+    title: "Precision Tooling",
+    category: "Machinery",
+    image: "/gallery/machine-setup-3.jpg",
+  },
+  {
+    title: "Workshop Interior",
+    category: "Facilities",
+    image: "/gallery/machine-1.jpg",
+  },
+  {
+    title: "Milling Machine Station",
+    category: "Facilities",
+    image: "/gallery/machine-2.jpg",
+  },
+  {
+    title: "Production Line",
+    category: "Facilities",
+    image: "/gallery/machine-3.jpg",
+  },
+  {
+    title: "Vertical Machining Operation",
+    category: "Machinery",
+    image: "/gallery/machine-4.jpg",
+  },
+  {
+    title: "CNC Lathe Section",
+    category: "Machinery",
+    image: "/gallery/machine-5.jpg",
+  },
+  {
+    title: "Detailed Component Finishing",
+    category: "Components",
+    image: "/gallery/component-detail.jpg",
+  },
+  {
+    title: "Complex Mold Cavity",
+    category: "Molds",
+    image: "/gallery/mold-part-2.jpg",
+  },
+  {
+    title: "Engineered Precision Part",
+    category: "Components",
+    image: "/gallery/precision-component-2.jpg",
+  },
+  {
+    title: "Custom Machined Base",
+    category: "Components",
+    image: "/gallery/precision-component-3.jpg",
+  },
+  {
+    title: "Our Hyderabad Workshop",
     category: "Facilities",
     image: "/gallery/workshop-floor.jpg",
   },
