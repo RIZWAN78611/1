@@ -17,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased transition-colors duration-300`}>
+      <body
+        className={`${inter.className} antialiased transition-colors duration-300`}
+        suppressHydrationWarning
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"

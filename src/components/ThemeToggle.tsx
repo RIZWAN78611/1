@@ -10,10 +10,11 @@ export function ThemeToggle() {
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
-    setMounted(true);
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
   }, []);
 
-  if (!mounted) return <div className="w-10 h-10" />;
+  if (!mounted) return <div className="w-10 h-10" aria-hidden="true" />;
 
   return (
     <motion.button

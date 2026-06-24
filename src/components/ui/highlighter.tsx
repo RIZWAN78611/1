@@ -290,7 +290,9 @@ export const Particles: React.FC<ParticlesProps> = ({
       context.current = canvasRef.current.getContext("2d");
     }
 
-    dpr.current = window.devicePixelRatio || 1;
+    if (typeof window !== 'undefined') {
+      dpr.current = window.devicePixelRatio || 1;
+    }
 
     const animate = () => {
       clearContext();
