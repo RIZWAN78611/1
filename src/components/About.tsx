@@ -15,9 +15,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="about" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
       {/* Tech background element */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 pointer-events-none">
+      <div className="absolute top-0 right-0 w-1/2 h-full opacity-5 dark:opacity-5 pointer-events-none">
         <svg viewBox="0 0 100 100" className="w-full h-full text-blue-500 fill-current">
           <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
             <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
@@ -34,15 +34,15 @@ const About = () => {
               subtitle="The UAU JIGBO standard"
               centered={false}
             />
-            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            <p className="text-slate-600 dark:text-gray-300 text-lg mb-8 leading-relaxed">
               At UAU JIGBO TECHNICS, we pride ourselves on delivering engineering excellence.
               Our state-of-the-art facility in Hyderabad is equipped with advanced CNC machinery
-              capable of achieving tolerances as tight as <span className="text-blue-500 font-bold">±0.010</span>.
+              capable of achieving tolerances as tight as <span className="text-blue-600 dark:text-blue-500 font-bold">±0.010</span>.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {specs.map((spec, i) => (
-                <div key={i} className="flex items-center space-x-2 text-gray-400">
-                  <CheckCircle2 className="h-5 w-5 text-blue-500" />
+                <div key={i} className="flex items-center space-x-2 text-slate-500 dark:text-gray-400">
+                  <CheckCircle2 className="h-5 w-5 text-blue-600 dark:text-blue-500" />
                   <span>{spec}</span>
                 </div>
               ))}
@@ -50,7 +50,7 @@ const About = () => {
           </div>
 
           <div className="lg:w-1/2 relative w-full">
-            <div className="aspect-video lg:aspect-square bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 shadow-2xl relative group">
+            <div className="aspect-video lg:aspect-square bg-slate-100 dark:bg-slate-800 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 shadow-2xl relative group">
               {/* Background Image of Micrometer */}
               <div
                 className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"

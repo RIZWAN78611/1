@@ -53,10 +53,10 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-24 bg-slate-900 relative overflow-hidden">
+    <section id="services" className="py-24 bg-slate-50 dark:bg-slate-950 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 z-0 opacity-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:2rem_2rem]" />
+      <div className="absolute inset-0 z-0 opacity-5 dark:opacity-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:2rem_2rem]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -70,19 +70,19 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="bg-slate-800 p-8 rounded-xl border border-slate-700 hover:border-blue-500 transition-all hover:shadow-2xl hover:shadow-blue-500/10 group"
+              className="bg-white dark:bg-slate-800 p-8 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500 transition-all hover:shadow-2xl hover:shadow-blue-500/10 group"
             >
-              <div className="bg-blue-600/10 p-4 rounded-lg inline-block mb-6 text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="bg-blue-600/10 dark:bg-blue-600/10 p-4 rounded-lg inline-block mb-6 text-blue-600 dark:text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 {service.icon}
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">{service.title}</h3>
+              <p className="text-slate-500 dark:text-gray-400 mb-6 text-sm leading-relaxed">
                 {service.description}
               </p>
               <ul className="space-y-2">
                 {service.items.map((item, i) => (
-                  <li key={i} className="flex items-center text-xs text-gray-500">
-                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2" />
+                  <li key={i} className="flex items-center text-xs text-slate-500 dark:text-gray-500">
+                    <span className="w-1.5 h-1.5 bg-blue-600 dark:bg-blue-500 rounded-full mr-2" />
                     {item}
                   </li>
                 ))}

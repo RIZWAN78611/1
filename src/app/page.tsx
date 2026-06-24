@@ -12,7 +12,7 @@ import PrecisionCursor from "@/components/PrecisionCursor";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950">
+    <main className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100">
       <PrecisionCursor />
       <Navbar />
       <Hero />
