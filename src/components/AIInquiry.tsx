@@ -137,6 +137,7 @@ const AIInquiry = () => {
           ease: "easeInOut"
         }}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label="Open AI Assistant"
         className="relative bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg shadow-blue-500/20 group overflow-hidden"
       >
         <motion.div
