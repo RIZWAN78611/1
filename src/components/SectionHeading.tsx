@@ -11,7 +11,7 @@ interface SectionHeadingProps {
 const SectionHeading = ({ title, subtitle, centered = true, className }: SectionHeadingProps) => {
   return (
     <div className={cn("mb-12", centered ? "text-center" : "text-left", className)}>
-      <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+      <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-4">
         {title}
       </h2>
       {subtitle && (
