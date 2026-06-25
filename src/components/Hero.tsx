@@ -6,7 +6,7 @@ import ThreeScene from "./ThreeScene";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-white dark:bg-slate-950">
+    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden bg-slate-950">
       {/* Decorative Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-600/10 blur-[120px] rounded-full" />
@@ -30,25 +30,25 @@ export default function Hero() {
               Innovation & Precision
             </div>
 
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white md:text-7xl">
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white md:text-7xl">
               CONNECTING <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-500">
                 IDEAS TO REALITY
               </span>
             </h1>
 
-            <p className="max-w-xl mb-10 text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="max-w-xl mb-10 text-lg leading-relaxed text-slate-400">
               UAU JIGBO TECHNICS delivers world-class precision engineering solutions.
               Specializing in high-complexity moulds and CNC components with a standard
               tolerance of <span className="text-blue-400 font-mono">±0.010</span>.
             </p>
 
             <div className="flex flex-wrap gap-4">
-              <button className="flex items-center px-8 py-4 font-bold text-slate-900 dark:text-white transition-all duration-300 bg-blue-600 rounded-xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 group">
+              <button className="flex items-center px-8 py-4 font-bold text-white transition-all duration-300 bg-blue-600 rounded-xl hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-600/20 group">
                 Explore Services
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" />
               </button>
-              <button className="flex items-center px-8 py-4 font-bold transition-all duration-300 border text-slate-300 border-slate-700 rounded-xl hover:bg-white/5 hover:text-slate-900 dark:text-white">
+              <button className="flex items-center px-8 py-4 font-bold transition-all duration-300 border text-slate-300 border-slate-700 rounded-xl hover:bg-white/5 hover:text-white">
                 View Gallery
               </button>
             </div>

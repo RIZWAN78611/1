@@ -1,85 +1,95 @@
-"use client";
+'use client'
 
-import { motion } from "framer-motion";
-import { ThemeToggle } from "./ThemeToggle";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-
-const navLinks = [
-  { name: "Home", href: "#" },
-  { name: "Services", href: "#services" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
-];
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, Settings } from 'lucide-react'
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    if (href === "#") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const element = document.querySelector(href);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  };
+  const navLinks = [
+    { name: 'Services', href: '#services' },
+    { name: 'About', href: '#about' },
+    { name: 'Gallery', href: '#gallery' },
+    { name: 'Contact', href: '#contact' }
+  ]
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "py-4 bg-white dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-800" : "py-6 bg-transparent"
-      }`}
-    >
-      <div className="container px-6 mx-auto flex items-center justify-between">
-        <div
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="flex items-center space-x-3 group cursor-pointer"
+    <nav className={`fixed w-full z-[100] transition-all duration-500 ${
+        scrolled ? "py-4 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800" : "py-6 bg-transparent"
+    }`}>
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <motion.a
+          href="#"
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          className="flex items-center gap-2 group"
         >
-          <div className="relative w-10 h-10 overflow-hidden rounded-xl bg-white p-1">
-             <Image src="/logo.png" alt="UAU JIGBO" fill className="object-contain" />
+          <div className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform">
+            <Settings className="text-white w-6 h-6" />
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-black tracking-tighter text-white leading-none">UAU JIGBO</span>
-            <span className="text-[10px] font-bold text-blue-500 uppercase tracking-[0.2em] leading-none mt-1">Technics</span>
+            <span className="text-xl font-black tracking-tighter text-white leading-none">UAU JIGBO</span>
+            <span className="text-[10px] font-bold text-blue-500 tracking-[0.2em] uppercase">Technics</span>
           </div>
-        </div>
+        </motion.a>
 
-        <div className="hidden md:flex items-center space-x-1">
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              onClick={(e) => scrollToSection(e, link.href)}
-              className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white hover:bg-white/5 rounded-lg transition-all"
+              className="text-sm font-medium text-slate-300 hover:text-blue-500 transition-colors uppercase tracking-widest"
             >
               {link.name}
             </a>
           ))}
-          <div className="ml-4 pl-4 border-l border-slate-800">
-            <ThemeToggle />
-          </div>
+          <a
+            href="#contact"
+            className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold rounded-full transition-all shadow-[0_10px_20px_rgba(37,99,235,0.2)]"
+          >
+            Get Quote
+          </a>
         </div>
 
-        <button className="md:hidden text-white">
-          <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
+        {/* Mobile Toggle */}
+        <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X /> : <Menu />}
         </button>
       </div>
-    </motion.nav>
-  );
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-slate-900 border-b border-slate-800 overflow-hidden"
+          >
+            <div className="container mx-auto px-6 py-8 flex flex-col gap-4">
+              {navLinks.map((link) => (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className="text-lg font-medium text-slate-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.name}
+                </a>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </nav>
+  )
 }

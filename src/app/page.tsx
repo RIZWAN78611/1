@@ -12,7 +12,7 @@ import PrecisionCursor from "@/components/PrecisionCursor";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-white dark:bg-slate-950 selection:bg-blue-500/30 selection:text-blue-200">
+    <main className="relative min-h-screen bg-slate-950 selection:bg-blue-500/30 selection:text-blue-200">
       <PrecisionCursor />
       <Hero />
       <Stats />

@@ -102,7 +102,7 @@ export default function Connect() {
   return (
     <section
       ref={containerRef}
-      className="relative py-32 bg-white dark:bg-slate-950 overflow-hidden border-y border-slate-200 dark:border-slate-900"
+      className="relative py-32 bg-slate-950 overflow-hidden border-y border-slate-900"
     >
       {/* Background Tech Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
@@ -133,17 +133,17 @@ export default function Connect() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-600 dark:text-blue-400 text-sm font-mono mb-8"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-mono mb-8"
           >
             <Circle className="w-2 h-2 fill-current animate-pulse" />
             GLOBAL PARTNER
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-8 tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
             Elevating <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Engineering</span> Standards
           </h2>
 
-          <p className="text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">
             From complex medical components to aerospace precision, we connect cutting-edge technology with unmatched craftsmanship to bring your most ambitious projects to life.
           </p>
 
@@ -159,11 +159,11 @@ export default function Connect() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-500"
+                className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-500"
               >
                 <item.icon className="w-10 h-10 text-blue-500 mb-4 mx-auto group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
-                <p className="text-slate-600 dark:text-slate-500 text-sm">{item.desc}</p>
+                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-slate-500 text-sm">{item.desc}</p>
               </motion.div>
             ))}
           </div>
