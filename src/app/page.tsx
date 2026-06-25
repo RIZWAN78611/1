@@ -6,7 +6,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import AIInquiry from "@/components/AIInquiry";
-import { Connect } from "@/components/Connect";
+import Connect from "@/components/Connect";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import PrecisionCursor from "@/components/PrecisionCursor";
 

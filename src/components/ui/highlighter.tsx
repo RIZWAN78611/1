@@ -8,7 +8,7 @@ interface MousePosition {
   y: number;
 }
 
-export default function useMousePosition(): MousePosition {
+function useMousePosition(): MousePosition {
   const [mousePosition, setMousePosition] = useState<MousePosition>({
     x: 0,
     y: 0,
@@ -35,7 +35,7 @@ interface HighlightGroupProps {
   refresh?: boolean;
 }
 
-export const HighlightGroup: React.FC<HighlightGroupProps> = ({
+const HighlightGroup: React.FC<HighlightGroupProps> = ({
   children,
   className = "",
   refresh = false,
@@ -114,12 +114,12 @@ interface HighlighterItemProps {
   className?: string;
 }
 
-export const HighlighterItem: React.FC<
+const HighlighterItem: React.FC<
   PropsWithChildren<HighlighterItemProps>
 > = ({ children, className = "" }) => {
   return (
     <div
-      className={`relative overflow-hidden p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-lime-500 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-3xl after:opacity-0 after:transition-opacity after:duration-500  before:hover:opacity-20 after:group-hover:opacity-100 dark:before:bg-white/50  ${className}`}
+      className={`relative overflow-hidden p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-blue-500 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-3xl after:opacity-0 after:transition-opacity after:duration-500 before:hover:opacity-20 after:group-hover:opacity-100 dark:before:bg-white/50 ${className}`}
     >
       {children}
     </div>
@@ -158,13 +158,13 @@ type Circle = {
   magnetism: number;
 };
 
-export const Particles: React.FC<ParticlesProps> = ({
+const Particles: React.FC<ParticlesProps> = ({
   className = "",
   quantity = 30,
   staticity = 50,
   ease = 50,
   refresh = false,
-  color = "#ffffff",
+  color = "#3b82f6",
   vx = 0,
   vy = 0,
 }) => {
@@ -375,3 +375,29 @@ export const Particles: React.FC<ParticlesProps> = ({
     </div>
   );
 };
+
+export function Highlighter() {
+  const items = [
+    { label: "Mould Design" },
+    { label: "CNC Milling" },
+    { label: "±0.010 Accuracy" },
+    { label: "Jig Boring" },
+    { label: "PET Moulds" },
+    { label: "Laser Engraving" }
+  ];
+
+  return (
+    <div className="relative h-[200px] overflow-hidden group">
+      <Particles className="absolute inset-0 z-0" quantity={50} color="#3b82f6" />
+      <HighlightGroup className="relative z-10 grid grid-cols-2 md:grid-cols-3 h-full">
+        {items.map((item, i) => (
+          <HighlighterItem key={i} className="flex items-center justify-center border-slate-200/20 dark:border-slate-800/20">
+            <div className="relative z-20 text-slate-800 dark:text-white font-black text-sm md:text-xl uppercase tracking-tighter transition-all group-hover:scale-110">
+              {item.label}
+            </div>
+          </HighlighterItem>
+        ))}
+      </HighlightGroup>
+    </div>
+  );
+}

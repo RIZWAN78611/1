@@ -79,7 +79,7 @@ const Gallery = () => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   return (
-    <section id="gallery" className="py-24 bg-white dark:bg-slate-900">
+    <section id="gallery" className="py-24 bg-slate-50 dark:bg-slate-900 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionHeading
           title="Our Gallery"
@@ -94,7 +94,7 @@ const Gallery = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="relative group overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 aspect-video cursor-pointer"
+              className="relative group overflow-hidden rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-800 aspect-video cursor-pointer shadow-lg shadow-slate-200/50 dark:shadow-none"
               onClick={() => setLightboxIndex(index)}
             >
               <Image
@@ -103,9 +103,9 @@ const Gallery = () => {
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110 opacity-90 dark:opacity-80 group-hover:opacity-100"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent dark:from-slate-950 dark:via-transparent dark:to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-80" />
               <div className="absolute bottom-0 left-0 p-6 w-full translate-y-2 group-hover:translate-y-0 transition-transform">
-                <span className="text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">{item.category}</span>
+                <span className="text-blue-400 dark:text-blue-400 text-xs font-bold uppercase tracking-widest">{item.category}</span>
                 <h3 className="text-white font-bold text-lg">{item.title}</h3>
               </div>
             </motion.div>
@@ -123,7 +123,7 @@ const Gallery = () => {
         </AnimatePresence>
 
         <div className="mt-12 text-center">
-          <p className="text-slate-500 dark:text-gray-400 italic">
+          <p className="text-slate-500 dark:text-slate-400 italic">
             Authentic equipment and components from UAU JIGBO TECHNICS, Hyderabad.
           </p>
         </div>
