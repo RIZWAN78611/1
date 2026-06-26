@@ -7,7 +7,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-950 pt-20 pb-10 border-t border-slate-900">
+    <footer className="bg-white dark:bg-slate-950 pt-20 pb-10 border-t border-slate-900">
       <div className="container px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 
@@ -17,7 +17,7 @@ export default function Footer() {
                 <Image src="/logo.png" alt="Logo" fill className="object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="text-white font-black tracking-tighter">UAU JIGBO</span>
+                <span className="text-slate-900 dark:text-slate-900 dark:text-white font-black tracking-tighter">UAU JIGBO</span>
                 <span className="text-[10px] text-blue-500 font-bold uppercase tracking-widest">Technics</span>
               </div>
             </div>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Quick Links</h4>
+            <h4 className="text-slate-900 dark:text-slate-900 dark:text-white font-bold mb-6">Quick Links</h4>
             <ul className="space-y-4">
               {["Home", "Services", "Gallery", "About", "Contact"].map((link) => (
                 <li key={link}>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Services</h4>
+            <h4 className="text-slate-900 dark:text-slate-900 dark:text-white font-bold mb-6">Services</h4>
             <ul className="space-y-4">
               {["CNC Machining", "Injection Moulds", "PET & Blow Moulds", "Laser Technology", "Jig Boring"].map((item) => (
                 <li key={item}>
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6">Contact</h4>
+            <h4 className="text-slate-900 dark:text-slate-900 dark:text-white font-bold mb-6">Contact</h4>
             <div className="space-y-4">
               <div className="flex items-center space-x-3 text-sm text-slate-500">
                 <Mail className="w-4 h-4 text-blue-500" />
@@ -83,8 +83,8 @@ export default function Footer() {
             © {currentYear} UAU JIGBO TECHNICS. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-xs text-slate-600">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <a href="#" className="hover:text-slate-900 dark:text-slate-900 dark:text-white transition-colors">Privacy Policy</a>
+            <a href="#" className="hover:text-slate-900 dark:text-slate-900 dark:text-white transition-colors">Terms of Service</a>
           </div>
         </div>
       </div>

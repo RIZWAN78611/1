@@ -58,14 +58,14 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-slate-950">
+    <section id="services" className="py-24 bg-white dark:bg-slate-950">
       <div className="container px-6 mx-auto">
         <div className="flex flex-col items-center mb-16 text-center">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-4 text-4xl font-bold text-white md:text-5xl"
+            className="mb-4 text-4xl font-bold text-slate-900 dark:text-slate-900 dark:text-white md:text-5xl"
           >
             Our Core Specialization
           </motion.h2>
@@ -75,7 +75,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="h-1 bg-blue-600 rounded-full"
           />
-          <p className="max-w-2xl mt-6 text-slate-400">
+          <p className="max-w-2xl mt-6 text-slate-600 dark:text-slate-600 dark:text-slate-400">
             We provide end-to-end manufacturing solutions using state-of-the-art technology
             and decades of engineering expertise.
           </p>
@@ -90,20 +90,20 @@ export default function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10 }}
-              className="group relative p-8 bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden"
+              className="group relative p-8 bg-slate-100 dark:bg-slate-100 dark:bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden"
             >
               {/* Background Glow */}
               <div className={`absolute -right-10 -top-10 w-32 h-32 blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br ${service.color}`} />
 
-              <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br ${service.color} text-white shadow-lg`}>
+              <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br ${service.color} text-slate-900 dark:text-slate-900 dark:text-white shadow-lg`}>
                 <service.icon className="w-7 h-7" />
               </div>
 
-              <h3 className="mb-4 text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+              <h3 className="mb-4 text-xl font-bold text-slate-900 dark:text-slate-900 dark:text-white group-hover:text-blue-400 transition-colors">
                 {service.title}
               </h3>
 
-              <p className="mb-6 text-slate-400 leading-relaxed">
+              <p className="mb-6 text-slate-600 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
                 {service.description}
               </p>
 

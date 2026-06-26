@@ -22,7 +22,7 @@ export default function Stats() {
   const scale = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
 
   return (
-    <section ref={containerRef} className="py-20 relative overflow-hidden bg-slate-950">
+    <section ref={containerRef} className="py-20 relative overflow-hidden bg-white dark:bg-slate-950">
        {/* Background Decoration */}
        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
@@ -44,7 +44,7 @@ export default function Stats() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="text-4xl md:text-5xl font-black text-white mb-2 font-mono"
+                className="text-4xl md:text-5xl font-black text-slate-900 dark:text-slate-900 dark:text-white mb-2 font-mono"
               >
                 {stat.value}
               </motion.div>

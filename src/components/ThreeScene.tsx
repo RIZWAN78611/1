@@ -5,7 +5,7 @@ import { Float, OrbitControls, PerspectiveCamera, Environment, Points, PointMate
 import { useRef, useMemo, useState, useEffect } from "react";
 import * as THREE from "three";
 
-function SpurGear({ teeth = 17, radius = 2, thickness = 0.5 }) {
+function SpurGear({ teeth = 17, radius = 2.5, thickness = 0.5 }) {
   const meshRef = useRef<THREE.Mesh>(null);
   const [hovered, setHovered] = useState(false);
 
@@ -72,8 +72,8 @@ function SpurGear({ teeth = 17, radius = 2, thickness = 0.5 }) {
     >
       <meshStandardMaterial
         color={hovered ? "#3b82f6" : "#64748b"}
-        metalness={0.9}
-        roughness={0.1}
+        metalness={0.8}
+        roughness={0.2}
         envMapIntensity={1}
       />
     </mesh>

@@ -84,11 +84,11 @@ const Gallery = () => {
     : galleryItems.filter(item => item.category === filter);
 
   return (
-    <section id="gallery" className="py-24 bg-slate-950">
+    <section id="gallery" className="py-24 bg-white dark:bg-slate-950">
       <div className="container px-6 mx-auto">
 
         <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Our Gallery</h2>
+          <h2 className="mb-4 text-4xl font-bold text-slate-900 dark:text-slate-900 dark:text-white md:text-5xl">Our Gallery</h2>
           <div className="h-1 w-20 bg-blue-600 rounded-full mb-8" />
 
           <div className="flex flex-wrap justify-center gap-4">
@@ -98,8 +98,8 @@ const Gallery = () => {
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-2 rounded-full text-sm font-bold transition-all ${
                   filter === cat
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
-                    : "bg-slate-900 text-slate-400 hover:bg-slate-800"
+                    ? "bg-blue-600 text-slate-900 dark:text-slate-900 dark:text-white shadow-lg shadow-blue-600/20"
+                    : "bg-slate-900 text-slate-600 dark:text-slate-600 dark:text-slate-400 hover:bg-slate-800"
                 }`}
               >
                 {cat}
@@ -139,7 +139,7 @@ const Gallery = () => {
                     <span className="w-6 h-px bg-blue-500" />
                     <span className="text-blue-400 text-xs font-bold uppercase tracking-[0.2em]">{item.category}</span>
                   </div>
-                  <h3 className="text-white font-bold text-xl">{item.title}</h3>
+                  <h3 className="text-slate-900 dark:text-slate-900 dark:text-white font-bold text-xl">{item.title}</h3>
                 </div>
               </motion.div>
             ))}

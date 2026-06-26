@@ -31,7 +31,7 @@ export default function Process() {
     <section className="py-24 bg-slate-900/30">
       <div className="container px-6 mx-auto">
         <div className="flex flex-col items-center mb-20 text-center">
-          <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Our Engineering Process</h2>
+          <h2 className="mb-4 text-4xl font-bold text-slate-900 dark:text-slate-900 dark:text-white md:text-5xl">Our Engineering Process</h2>
           <div className="h-1 w-20 bg-blue-600 rounded-full" />
         </div>
 
@@ -49,14 +49,14 @@ export default function Process() {
                 transition={{ delay: index * 0.2 }}
                 className="relative z-10 flex flex-col items-center text-center"
               >
-                <div className="flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-slate-950 border-2 border-blue-600/50 shadow-[0_0_20px_rgba(37,99,235,0.2)] group hover:border-blue-500 transition-colors">
+                <div className="flex items-center justify-center w-20 h-20 mb-8 rounded-full bg-white dark:bg-slate-950 border-2 border-blue-600/50 shadow-[0_0_20px_rgba(37,99,235,0.2)] group hover:border-blue-500 transition-colors">
                   <step.icon className="w-8 h-8 text-blue-500 group-hover:scale-110 transition-transform" />
                   <div className="absolute -top-4 -right-4 w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-sm font-bold text-blue-400">
                     0{index + 1}
                   </div>
                 </div>
-                <h3 className="mb-4 text-xl font-bold text-white">{step.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed max-w-[200px]">
+                <h3 className="mb-4 text-xl font-bold text-slate-900 dark:text-slate-900 dark:text-white">{step.title}</h3>
+                <p className="text-slate-600 dark:text-slate-600 dark:text-slate-400 text-sm leading-relaxed max-w-[200px]">
                   {step.description}
                 </p>
               </motion.div>

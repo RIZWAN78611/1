@@ -15,7 +15,7 @@ const specs = [
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-slate-950 relative overflow-hidden">
+    <section id="about" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
       {/* Tech background element */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
         <svg viewBox="0 0 100 100" className="w-full h-full text-blue-500 fill-current">
@@ -36,9 +36,9 @@ const About = () => {
             className="lg:w-1/2"
           >
             <div className="text-blue-500 font-bold tracking-widest uppercase text-sm mb-4">Our Legacy</div>
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">Committed to Engineering Excellence</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-8">Committed to Engineering Excellence</h2>
 
-            <p className="text-slate-400 text-lg mb-10 leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-600 dark:text-slate-400 text-lg mb-10 leading-relaxed">
               At UAU JIGBO TECHNICS, we pride ourselves on delivering world-class engineering solutions.
               Our state-of-the-art facility in Hyderabad is equipped with advanced CNC machinery
               capable of achieving tolerances as tight as <span className="text-blue-400 font-mono font-bold">±0.010</span>.
@@ -55,9 +55,9 @@ const About = () => {
                   className="flex items-center space-x-3 group"
                 >
                   <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center group-hover:bg-blue-500 transition-colors">
-                    <CheckCircle2 className="h-5 w-5 text-blue-500 group-hover:text-white transition-colors" />
+                    <CheckCircle2 className="h-5 w-5 text-blue-500 group-hover:text-slate-900 dark:text-slate-900 dark:text-white transition-colors" />
                   </div>
-                  <span className="text-slate-300 group-hover:text-white transition-colors">{spec}</span>
+                  <span className="text-slate-300 group-hover:text-slate-900 dark:text-slate-900 dark:text-white transition-colors">{spec}</span>
                 </motion.div>
               ))}
             </div>
@@ -82,15 +82,15 @@ const About = () => {
                    backgroundImage: 'url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000")'
                 }}
               />
-              <div className="absolute inset-0 bg-slate-950/60 group-hover:bg-slate-950/40 transition-colors duration-500" />
+              <div className="absolute inset-0 bg-white dark:bg-slate-950/60 group-hover:bg-white dark:bg-slate-950/40 transition-colors duration-500" />
 
               <div className="relative p-12 flex flex-col justify-end h-full z-10">
-                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-white shadow-xl">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-slate-900 dark:text-slate-900 dark:text-white shadow-xl">
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04 inter-2 2 0 00-2.25 2.25c0 5.935 3.197 11.124 8.003 13.985a1.994 1.994 0 002.012 0c4.806-2.861 8.003-8.15 8.003-13.985a2 2 0 00-2.25-2.25z" />
                   </svg>
                 </div>
-                <h4 className="text-3xl font-bold text-white mb-4">Quality & Assurance</h4>
+                <h4 className="text-3xl font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-4">Quality & Assurance</h4>
                 <p className="text-blue-300 font-medium italic text-lg leading-relaxed">
                   &quot;In the world of precision engineering, there is no room for error. We live by the ±0.010 standard.&quot;
                 </p>

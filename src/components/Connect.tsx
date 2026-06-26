@@ -102,7 +102,7 @@ export default function Connect() {
   return (
     <section
       ref={containerRef}
-      className="relative py-32 bg-slate-950 overflow-hidden border-y border-slate-900"
+      className="relative py-32 bg-white dark:bg-slate-950 overflow-hidden border-y border-slate-900"
     >
       {/* Background Tech Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
@@ -120,7 +120,7 @@ export default function Connect() {
       {/* Ghost Cursors */}
       <div className="absolute inset-0 opacity-20 pointer-events-none">
         <FloatingCursor delay={0} color="text-blue-500" />
-        <FloatingCursor delay={5} color="text-slate-400" />
+        <FloatingCursor delay={5} color="text-slate-600 dark:text-slate-600 dark:text-slate-400" />
         <FloatingCursor delay={10} color="text-blue-400" />
       </div>
 
@@ -139,11 +139,11 @@ export default function Connect() {
             GLOBAL PARTNER
           </motion.div>
 
-          <h2 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tight">
+          <h2 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-8 tracking-tight">
             Elevating <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-400">Engineering</span> Standards
           </h2>
 
-          <p className="text-xl text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-xl text-slate-600 dark:text-slate-600 dark:text-slate-400 mb-12 leading-relaxed max-w-2xl mx-auto">
             From complex medical components to aerospace precision, we connect cutting-edge technology with unmatched craftsmanship to bring your most ambitious projects to life.
           </p>
 
@@ -159,10 +159,10 @@ export default function Connect() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="p-8 rounded-3xl bg-slate-900/50 border border-slate-800 backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-500"
+                className="p-8 rounded-3xl bg-slate-50 dark:bg-slate-50 dark:bg-slate-900/50 border border-slate-800 backdrop-blur-sm group hover:border-blue-500/30 transition-all duration-500"
               >
                 <item.icon className="w-10 h-10 text-blue-500 mb-4 mx-auto group-hover:scale-110 transition-transform" />
-                <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-2">{item.title}</h3>
                 <p className="text-slate-500 text-sm">{item.desc}</p>
               </motion.div>
             ))}
@@ -173,7 +173,7 @@ export default function Connect() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold shadow-[0_20px_50px_rgba(37,99,235,0.3)] transition-all flex items-center gap-3"
+              className="px-10 py-5 bg-blue-600 hover:bg-blue-700 text-slate-900 dark:text-slate-900 dark:text-white rounded-full font-bold shadow-[0_20px_50px_rgba(37,99,235,0.3)] transition-all flex items-center gap-3"
             >
               Start Your Project
               <Zap size={18} className="fill-current" />
