@@ -312,7 +312,6 @@ export const Particles: React.FC<ParticlesProps> = ({
   ): number => {
     const remapped =
       ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
-    remapped > 0 ? remapped : 0;
     return remapped > 0 ? remapped : 0;
   };
 

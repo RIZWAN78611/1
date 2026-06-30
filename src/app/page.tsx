@@ -7,6 +7,7 @@ import About from "@/components/About";
 import Contact from "@/components/Contact";
 import Connect from "@/components/Connect";
 import AIInquiry from "@/components/AIInquiry";
+import PrecisionCursor from "@/components/PrecisionCursor";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
       <Contact />
       <Footer />
       <AIInquiry />
+      <PrecisionCursor />
       <WhatsAppButton />
     </main>
   );
