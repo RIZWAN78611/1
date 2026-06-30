@@ -10,6 +10,7 @@ import {
   Maximize,
   ChevronRight
 } from "lucide-react";
+import { HighlightGroup, HighlighterItem } from "./ui/highlighter";
 
 const services = [
   {
@@ -81,50 +82,50 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <HighlightGroup className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              whileHover={{ y: -10 }}
-              className="group relative p-8 bg-slate-100 dark:bg-slate-100 dark:bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden"
-            >
-              {/* Background Glow */}
-              <div className={`absolute -right-10 -top-10 w-32 h-32 blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br ${service.color}`} />
+            <HighlighterItem key={index} className="rounded-2xl">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="group relative p-8 h-full bg-slate-100 dark:bg-slate-900/50 border border-slate-800 rounded-2xl overflow-hidden"
+              >
+                {/* Background Glow */}
+                <div className={`absolute -right-10 -top-10 w-32 h-32 blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-gradient-to-br ${service.color}`} />
 
-              <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br ${service.color} text-slate-900 dark:text-slate-900 dark:text-white shadow-lg`}>
-                <service.icon className="w-7 h-7" />
-              </div>
+                <div className={`inline-flex items-center justify-center w-14 h-14 mb-6 rounded-xl bg-gradient-to-br ${service.color} text-white shadow-lg`}>
+                  <service.icon className="w-7 h-7" />
+                </div>
 
-              <h3 className="mb-4 text-xl font-bold text-slate-900 dark:text-slate-900 dark:text-white group-hover:text-blue-400 transition-colors">
-                {service.title}
-              </h3>
+                <h3 className="mb-4 text-xl font-bold text-slate-900 dark:text-white group-hover:text-blue-400 transition-colors">
+                  {service.title}
+                </h3>
 
-              <p className="mb-6 text-slate-600 dark:text-slate-600 dark:text-slate-400 leading-relaxed">
-                {service.description}
-              </p>
+                <p className="mb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
+                  {service.description}
+                </p>
 
-              <ul className="space-y-3">
-                {service.features.map((feature, fIndex) => (
-                  <li key={fIndex} className="flex items-center text-sm text-slate-500">
-                    <ChevronRight className="w-4 h-4 mr-2 text-blue-500" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                <ul className="space-y-3">
+                  {service.features.map((feature, fIndex) => (
+                    <li key={fIndex} className="flex items-center text-sm text-slate-500">
+                      <ChevronRight className="w-4 h-4 mr-2 text-blue-500" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
-              <div className="mt-8 pt-6 border-t border-slate-800/50">
-                <button className="text-sm font-bold text-blue-500 hover:text-blue-400 flex items-center transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1" />
-                </button>
-              </div>
-            </motion.div>
+                <div className="mt-8 pt-6 border-t border-slate-800/50">
+                  <button className="text-sm font-bold text-blue-500 hover:text-blue-400 flex items-center transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1" />
+                  </button>
+                </div>
+              </motion.div>
+            </HighlighterItem>
           ))}
-        </div>
+        </HighlightGroup>
       </div>
     </section>
   );

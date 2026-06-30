@@ -8,12 +8,13 @@ import Contact from "@/components/Contact";
 import Connect from "@/components/Connect";
 import AIInquiry from "@/components/AIInquiry";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import PrecisionCursor from "@/components/PrecisionCursor";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="relative min-h-screen bg-white dark:bg-slate-950 selection:bg-blue-500/30 selection:text-blue-200">
-      <PrecisionCursor />
+      <Navbar />
       <Hero />
       <Stats />
       <Services />
@@ -22,6 +23,7 @@ export default function Home() {
       <Gallery />
       <Connect />
       <Contact />
+      <Footer />
       <AIInquiry />
       <WhatsAppButton />
     </main>

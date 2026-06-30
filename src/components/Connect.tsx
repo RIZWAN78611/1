@@ -13,6 +13,7 @@ import {
   Maximize2,
   LucideIcon
 } from 'lucide-react'
+import { Particles } from './ui/highlighter'
 
 interface TechIconProps {
   icon: LucideIcon
@@ -104,6 +105,7 @@ export default function Connect() {
       ref={containerRef}
       className="relative py-32 bg-white dark:bg-slate-950 overflow-hidden border-y border-slate-900"
     >
+      <Particles className="absolute inset-0 z-0" quantity={100} staticity={30} />
       {/* Background Tech Elements */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-blue-500/20 to-transparent" />
