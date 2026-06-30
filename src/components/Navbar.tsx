@@ -36,9 +36,13 @@ export default function Navbar() {
           animate={{ opacity: 1, x: 0 }}
           className="flex items-center gap-3 group"
         >
-          <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center group-hover:rotate-12 transition-all duration-500 shadow-lg shadow-blue-600/20">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-600/20"
+          >
             <Settings className="text-white w-7 h-7" />
-          </div>
+          </motion.div>
           <div className="flex flex-col">
             <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white leading-none uppercase">UAU JIGBO</span>
             <span className="text-[10px] font-black text-blue-600 dark:text-blue-500 tracking-[0.4em] uppercase">Technics</span>
