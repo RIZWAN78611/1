@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { CheckCircle2, ChevronRight } from "lucide-react";
+import WireframeDisc from "./WireframeDisc";
 
 const specs = [
   "Precision CNC Milling & Turning",
@@ -75,23 +76,28 @@ const About = () => {
             transition={{ duration: 0.8 }}
             className="lg:w-1/2 relative w-full"
           >
-            <div className="aspect-square bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 shadow-2xl relative group">
-              <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                style={{
-                   backgroundImage: 'url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000")'
-                }}
-              />
-              <div className="absolute inset-0 bg-white dark:bg-slate-950/60 group-hover:bg-white dark:bg-slate-950/40 transition-colors duration-500" />
+            <div className="aspect-square bg-white dark:bg-slate-950 rounded-3xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-2xl relative group">
+              <div className="absolute inset-0 z-0 opacity-20">
+                <div
+                  className="absolute inset-0 bg-cover bg-center grayscale"
+                  style={{
+                     backgroundImage: 'url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000")'
+                  }}
+                />
+              </div>
 
-              <div className="relative p-12 flex flex-col justify-end h-full z-10">
-                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-slate-900 dark:text-slate-900 dark:text-white shadow-xl">
+              <div className="absolute inset-0 flex items-center justify-center p-8">
+                <WireframeDisc />
+              </div>
+
+              <div className="relative p-12 flex flex-col justify-end h-full z-10 pointer-events-none">
+                <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-blue-600 text-white shadow-xl">
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04 inter-2 2 0 00-2.25 2.25c0 5.935 3.197 11.124 8.003 13.985a1.994 1.994 0 002.012 0c4.806-2.861 8.003-8.15 8.003-13.985a2 2 0 00-2.25-2.25z" />
                   </svg>
                 </div>
-                <h4 className="text-3xl font-bold text-slate-900 dark:text-slate-900 dark:text-white mb-4">Quality & Assurance</h4>
-                <p className="text-blue-300 font-medium italic text-lg leading-relaxed">
+                <h4 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Quality & Assurance</h4>
+                <p className="text-blue-500 dark:text-blue-300 font-medium italic text-lg leading-relaxed">
                   &quot;In the world of precision engineering, there is no room for error. We live by the ±0.010 standard.&quot;
                 </p>
               </div>
