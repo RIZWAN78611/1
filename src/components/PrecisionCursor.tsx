@@ -43,12 +43,9 @@ export default function PrecisionCursor() {
         <div className="absolute top-1/2 left-1/2 w-2 h-2 border border-blue-500 rounded-full -translate-x-1/2 -translate-y-1/2" />
 
         {/* Coordinates Display */}
-        <div className="absolute top-6 left-6 px-3 py-1.5 bg-slate-950/90 border border-blue-500/40 rounded-lg font-mono text-[10px] text-blue-400 whitespace-nowrap shadow-2xl backdrop-blur-md flex flex-col gap-0.5">
-          <div className="flex justify-between gap-4">
-            <span>X: {mousePosition.x.toString().padStart(4, "0")}</span>
-            <span className="text-blue-500/50">|</span>
-            <span>Y: {mousePosition.y.toString().padStart(4, "0")}</span>
-          </div>
+        <div className="absolute top-6 left-6 font-mono text-[10px] text-blue-400/80 whitespace-nowrap flex flex-col pointer-events-none">
+          <span>X: {mousePosition.x.toString().padStart(4, "0")}</span>
+          <span>Y: {mousePosition.y.toString().padStart(4, "0")}</span>
         </div>
       </motion.div>
 
