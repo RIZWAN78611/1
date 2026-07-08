@@ -5,7 +5,6 @@ import { motion, useSpring, useMotionValue } from "framer-motion";
 
 export default function PrecisionCursor() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [lastKey, setLastKey] = useState<string>("NONE");
 
   const cursorX = useMotionValue(-100);
   const cursorY = useMotionValue(-100);
@@ -21,15 +20,9 @@ export default function PrecisionCursor() {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
-      setLastKey(e.key.toUpperCase());
-    };
-
     window.addEventListener("mousemove", moveCursor);
-    window.addEventListener("keydown", handleKeyDown);
     return () => {
       window.removeEventListener("mousemove", moveCursor);
-      window.removeEventListener("keydown", handleKeyDown);
     };
   }, [cursorX, cursorY]);
 
@@ -52,22 +45,10 @@ export default function PrecisionCursor() {
         {/* Coordinates Display */}
         <div className="absolute top-6 left-6 px-3 py-1.5 bg-slate-950/90 border border-blue-500/40 rounded-lg font-mono text-[10px] text-blue-400 whitespace-nowrap shadow-2xl backdrop-blur-md flex flex-col gap-0.5">
           <div className="flex justify-between gap-4">
-            <span>POS_X: {mousePosition.x.toString().padStart(4, "0")}</span>
+            <span>X: {mousePosition.x.toString().padStart(4, "0")}</span>
             <span className="text-blue-500/50">|</span>
-            <span>POS_Y: {mousePosition.y.toString().padStart(4, "0")}</span>
+            <span>Y: {mousePosition.y.toString().padStart(4, "0")}</span>
           </div>
-          <div className="flex justify-between gap-4 border-t border-blue-500/20 pt-0.5 mt-0.5">
-            <span>INPUT: {lastKey}</span>
-            <span className="text-blue-500/50">|</span>
-            <span className="text-emerald-400">TOL: ±0.010</span>
-          </div>
-        </div>
-
-        {/* Leading Arrow */}
-        <div className="absolute -top-1 -left-1">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1 1L11 11M11 11V4M11 11H4" stroke="#3b82f6" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
         </div>
       </motion.div>
 
