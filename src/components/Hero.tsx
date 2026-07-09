@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Cpu, Target, Zap } from "lucide-react";
+import { ArrowRight, Cpu, Target } from "lucide-react";
 import Image from "next/image";
-import WireframeGear from "./WireframeGear";
+import WireframeDisc from "./WireframeDisc";
 
 export default function Hero() {
   return (
@@ -17,6 +17,27 @@ export default function Hero() {
           className="object-cover opacity-10 dark:opacity-20 grayscale contrast-125"
           priority
         />
+
+        {/* Branding Overlay for Technician Jacket */}
+        <div className="absolute inset-0 hidden md:block pointer-events-none">
+          <div
+            className="absolute right-[12%] top-[65%] transform -rotate-12 flex flex-col items-center opacity-40 dark:opacity-60"
+            style={{ perspective: '500px' }}
+          >
+            <div className="bg-slate-900/40 backdrop-blur-[2px] px-3 py-1 rounded border border-white/10 shadow-xl">
+               <div className="flex items-center gap-1.5">
+                  <div className="w-3 h-3 bg-blue-500 rounded-sm" />
+                  <span className="text-[10px] font-black text-white tracking-tighter leading-none">
+                    UAU JIGBO TECHNICS
+                  </span>
+               </div>
+               <div className="text-[6px] text-blue-400 font-bold uppercase tracking-[0.2em] mt-0.5 text-center">
+                 Precision Engineering
+               </div>
+            </div>
+          </div>
+        </div>
+
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/80 to-transparent dark:from-slate-950 dark:via-slate-950/80 dark:to-transparent" />
       </div>
 
@@ -83,14 +104,14 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* 3D Wireframe Gear */}
+          {/* 3D Wireframe Disc (Updated) */}
           <motion.div
              initial={{ opacity: 0, scale: 0.8 }}
              animate={{ opacity: 1, scale: 1 }}
              transition={{ duration: 1.2, delay: 0.2 }}
              className="relative h-[400px] lg:h-[600px]"
           >
-             <WireframeGear />
+             <WireframeDisc />
              {/* Technical Overlay */}
              <div className="absolute inset-0 border border-blue-500/10 rounded-3xl pointer-events-none">
                 <div className="absolute top-4 left-4 w-10 h-10 border-t-2 border-l-2 border-blue-500/30" />
